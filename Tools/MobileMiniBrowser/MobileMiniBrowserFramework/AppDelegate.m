@@ -26,6 +26,7 @@
 #import "AppDelegate.h"
 
 #import "WebViewController.h"
+#import "HDWebURLProtocol.h"
 
 @interface AppDelegate ()
 @end
@@ -34,6 +35,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [HDWebURLProtocol registerClass];
     UIStoryboard *frameworkMainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle bundleForClass:[AppDelegate class]]];
     WebViewController *viewController = [frameworkMainStoryboard instantiateInitialViewController];
     if (!viewController)

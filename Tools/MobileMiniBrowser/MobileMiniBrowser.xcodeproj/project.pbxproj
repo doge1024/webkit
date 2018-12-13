@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34BB604721C2D46E00755759 /* NSURLProtocol+HDWebKitSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BB604321C2D46E00755759 /* NSURLProtocol+HDWebKitSupport.m */; };
+		34BB604821C2D46E00755759 /* HDWebURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BB604621C2D46E00755759 /* HDWebURLProtocol.m */; };
+		34BB604921C2D58400755759 /* HDWebURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BB604621C2D46E00755759 /* HDWebURLProtocol.m */; };
+		34BB604A21C2D58B00755759 /* NSURLProtocol+HDWebKitSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BB604321C2D46E00755759 /* NSURLProtocol+HDWebKitSupport.m */; };
 		3F0B439B1D908D0C00D186B5 /* looping2s.html in Resources */ = {isa = PBXBuildFile; fileRef = 3F0B439A1D908D0C00D186B5 /* looping2s.html */; };
 		3F0B439D1D908DE700D186B5 /* test2s.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3F0B439C1D908DE700D186B5 /* test2s.mp4 */; };
 		CD1DAF971D709E3600017CF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1DAF961D709E3600017CF0 /* main.m */; };
@@ -62,6 +66,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		34BB604321C2D46E00755759 /* NSURLProtocol+HDWebKitSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+HDWebKitSupport.m"; sourceTree = "<group>"; };
+		34BB604421C2D46E00755759 /* HDWebURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDWebURLProtocol.h; sourceTree = "<group>"; };
+		34BB604521C2D46E00755759 /* NSURLProtocol+HDWebKitSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+HDWebKitSupport.h"; sourceTree = "<group>"; };
+		34BB604621C2D46E00755759 /* HDWebURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDWebURLProtocol.m; sourceTree = "<group>"; };
 		3F0B439A1D908D0C00D186B5 /* looping2s.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = looping2s.html; path = Resources/looping2s.html; sourceTree = "<group>"; };
 		3F0B439C1D908DE700D186B5 /* test2s.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = test2s.mp4; path = Resources/test2s.mp4; sourceTree = "<group>"; };
 		CD1DAF921D709E3600017CF0 /* MobileMiniBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileMiniBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +126,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34BB604221C2D46E00755759 /* URLProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				34BB604421C2D46E00755759 /* HDWebURLProtocol.h */,
+				34BB604621C2D46E00755759 /* HDWebURLProtocol.m */,
+				34BB604521C2D46E00755759 /* NSURLProtocol+HDWebKitSupport.h */,
+				34BB604321C2D46E00755759 /* NSURLProtocol+HDWebKitSupport.m */,
+			);
+			path = URLProtocol;
+			sourceTree = "<group>";
+		};
 		CD1DAF891D709E3600017CF0 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +193,7 @@
 				CDA985121D76471700EBC399 /* Resources */,
 				CD1DAF981D709E3600017CF0 /* AppDelegate.h */,
 				CD1DAF991D709E3600017CF0 /* AppDelegate.m */,
+				34BB604221C2D46E00755759 /* URLProtocol */,
 				CD1DAFA11D709E3600017CF0 /* Assets.xcassets */,
 				CD498B471D7634C700681FA7 /* Info.plist */,
 				CD1DAF9E1D709E3600017CF0 /* Main.storyboard */,
@@ -361,6 +381,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34BB604821C2D46E00755759 /* HDWebURLProtocol.m in Sources */,
+				34BB604721C2D46E00755759 /* NSURLProtocol+HDWebKitSupport.m in Sources */,
 				CD1DAF971D709E3600017CF0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +399,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34BB604921C2D58400755759 /* HDWebURLProtocol.m in Sources */,
+				34BB604A21C2D58B00755759 /* NSURLProtocol+HDWebKitSupport.m in Sources */,
 				CD498B4D1D763D7100681FA7 /* AppDelegate.m in Sources */,
 				CD498B4B1D763D7100681FA7 /* TabViewController.m in Sources */,
 				CD498B4C1D763D7100681FA7 /* WebViewController.m in Sources */,

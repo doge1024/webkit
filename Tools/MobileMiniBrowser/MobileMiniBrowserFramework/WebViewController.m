@@ -76,6 +76,42 @@ void* URLContext = &URLContext;
     self.tabViewController.modalPresentationStyle = UIModalPresentationPopover;
 
     [self setCurrentWebView:[self createWebView]];
+    
+    UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn2 setBackgroundColor:[UIColor greenColor]];
+    btn2.frame = CGRectMake(0, 250, 50, 30);
+    [self.view addSubview:btn2];
+    [btn2 addTarget:self action:@selector(btnAction2) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setBackgroundColor:[UIColor greenColor]];
+    btn.frame = CGRectMake(0, 300, 50, 30);
+    [self.view addSubview:btn];
+    [btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)btnAction2 {
+    
+    [self.currentWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://127.0.0.1:5000/"]]];
+}
+
+- (void)btnAction {
+    NSString *str = @"\
+    fetch(\"/name\", { \
+    headers: { \
+        \"Content-Type\": \"application/x-www-form-urlencoded\", \
+        \"HDProtocolWebPostKey\": \"1\" \
+    }, \
+    method: \"POST\", \
+    body: \"name=llllllll\" \
+    }).then(response => response.json()).then(response => { \
+        console.log(response) \
+    }).catch((err)=>{ \
+        console.log(err) \
+    }) ";
+    [self.currentWebView evaluateJavaScript:str completionHandler:^(id _Nullable rep, NSError * _Nullable error) {
+        NSLog(@"%@", error);
+    }];
 }
 
 

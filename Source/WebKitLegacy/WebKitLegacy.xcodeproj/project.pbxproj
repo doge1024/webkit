@@ -3217,6 +3217,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 1000;
+				TargetAttributes = {
+					9398100A0824BF01008DF038 = {
+						DevelopmentTeam = 5CJEBBFK9A;
+					};
+				};
 			};
 			buildConfigurationList = 149C283208902B0F008A9EFC /* Build configuration list for PBXProject "WebKitLegacy" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -3716,7 +3721,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1C904FD20BA9DD0F0081E9D0 /* WebKitLegacy.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				DEBUG_DEFINES = "$(DEBUG_DEFINES_debug) ENABLE_WEBKIT_UNSET_DYLD_FRAMEWORK_PATH";
+				DEVELOPMENT_TEAM = 5CJEBBFK9A;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 			};
 			name = Debug;

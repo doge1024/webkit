@@ -10097,6 +10097,15 @@
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 1000;
 				TargetAttributes = {
+					1AC25FAF12A48EA700BD2671 = {
+						DevelopmentTeam = 5CJEBBFK9A;
+					};
+					510031EA1379CACB00C8DFE4 = {
+						DevelopmentTeam = 5CJEBBFK9A;
+					};
+					8DC2EF4F0486A6940098B216 = {
+						DevelopmentTeam = 5CJEBBFK9A;
+					};
 					E1AC2E2720F7B94C00B0897D = {
 						CreatedOnToolsVersion = 9.3;
 						ProvisioningStyle = Automatic;
@@ -11226,6 +11235,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A1EDD2DB1884B96400BBFE98 /* PluginProcessShim.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = 5CJEBBFK9A;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 				PRODUCT_NAME = PluginProcessShim;
 			};
@@ -11253,6 +11264,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BCB86F4B116AAACD00CE20B7 /* WebKit.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = 5CJEBBFK9A;
+				ENABLE_BITCODE = NO;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 			};
 			name = Debug;
@@ -11261,6 +11275,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BCB86F4B116AAACD00CE20B7 /* WebKit.xcconfig */;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 			};
 			name = Release;
@@ -11330,6 +11345,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A1EDD2DC1884B9B500BBFE98 /* SecItemShim.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = 5CJEBBFK9A;
 				PRODUCT_NAME = SecItemShim;
 			};
 			name = Debug;
@@ -11369,6 +11386,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BCB86F4B116AAACD00CE20B7 /* WebKit.xcconfig */;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 			};
 			name = Production;

@@ -31924,6 +31924,17 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 1000;
+				TargetAttributes = {
+					417DA6CF13734E02007C57FB = {
+						DevelopmentTeam = 5CJEBBFK9A;
+					};
+					93F198A508245E59001E9ABC = {
+						DevelopmentTeam = 5CJEBBFK9A;
+					};
+					E1BA66F31742BDE000C20251 = {
+						DevelopmentTeam = 5CJEBBFK9A;
+					};
+				};
 			};
 			buildConfigurationList = 149C284308902B11008A9EFC /* Build configuration list for PBXProject "WebCore" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -33103,6 +33114,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1CDD45E50BA9C84600F90147 /* WebCore.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = 5CJEBBFK9A;
+				ENABLE_BITCODE = NO;
 			};
 			name = Debug;
 		};
@@ -33110,6 +33124,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1CDD45E50BA9C84600F90147 /* WebCore.xcconfig */;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 			};
 			name = Release;
 		};
@@ -33118,6 +33133,7 @@
 			baseConfigurationReference = 1CDD45E50BA9C84600F90147 /* WebCore.xcconfig */;
 			buildSettings = {
 				BUILD_VARIANTS = normal;
+				ENABLE_BITCODE = NO;
 			};
 			name = Production;
 		};
@@ -33151,6 +33167,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4181707D1386EDF20057AAA4 /* WebCoreTestSupport.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = 5CJEBBFK9A;
 			};
 			name = Debug;
 		};
@@ -33241,6 +33259,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E1BA66F21742BDCC00C20251 /* WebCoreTestShim.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = 5CJEBBFK9A;
 			};
 			name = Debug;
 		};

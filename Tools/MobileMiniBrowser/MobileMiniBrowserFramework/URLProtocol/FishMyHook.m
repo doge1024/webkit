@@ -12,6 +12,7 @@
 #import <objc/runtime.h>
 #import "Aspects.h"
 #import "NSURLRequest+CYLNSURLProtocolExtension.h"
+#import "NSObject+methodSwizzle.h"
 
 @implementation NSURLProtocol (XXXX)
 
@@ -26,8 +27,8 @@
 + (void)load {
     
 //    [self test];
-//    [self exchange];
-    [self aspectHook];
+    [self exchange];
+//    [self aspectHook];
 }
 
 + (void)aspectHook {
@@ -61,39 +62,41 @@
 }
 
 + (void)exchange {
-    const char *className = @"NSURLRequest".UTF8String;
-    Class WKCustomProtocolClass = objc_getClass(className);
-    SEL af_startLoading = NSSelectorFromString(@"fix_mutableCopy");
     
-    SEL startLoading = NSSelectorFromString(@"mutableCopy");
+    Class WKCustomProtocolClass = object_getClass(NSClassFromString(@"WKCustomProtocol")); // HDWebURLProtocol
+    
+    SEL canInitWithRequest = NSSelectorFromString(@"canInitWithRequest:");
+    SEL af_canInitWithRequest = NSSelectorFromString(@"fix_canInitWithRequest:");
     
     BOOL add1 = class_addMethod(WKCustomProtocolClass,
-                                startLoading,
-                                class_getMethodImplementation(WKCustomProtocolClass, startLoading),
-                                "@@:");
+                                canInitWithRequest,
+                                class_getMethodImplementation(WKCustomProtocolClass, canInitWithRequest),
+                                "B@:@");
     
-    BOOL add2 = class_addMethod(WKCustomProtocolClass,
-                                af_startLoading,
-                                class_getMethodImplementation(WKCustomProtocolClass, af_startLoading),
-                                "@@:");
+    BOOL add2 = class_addMethod([WKCustomProtocolClass class],
+                                af_canInitWithRequest,
+                                (IMP)af_canInitWithRequest2,
+                                "B@:@");
     
     NSLog(@"%d,%d", add1, add2);
     
-    //    Method orgi = class_getInstanceMethod(WKCustomProtocolClass, startLoading);
-    //    Method after = class_getInstanceMethod(WKCustomProtocolClass, af_startLoading);
-    Method orgi = class_getClassMethod(WKCustomProtocolClass, startLoading);
-    Method after = class_getClassMethod(WKCustomProtocolClass, af_startLoading);
+    Method orgi = class_getClassMethod(WKCustomProtocolClass, canInitWithRequest);
+    Method after = class_getClassMethod(WKCustomProtocolClass, af_canInitWithRequest);
     
     method_exchangeImplementations(orgi, after);
 }
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-NSURLRequest * first_startLoading (id sender, SEL cmd, NSURLRequest *req) {
-    SEL startLoading = NSSelectorFromString(@"fix_mutableCopy");
-    return [sender performSelector:startLoading];
+
+BOOL af_canInitWithRequest2(id sender, SEL cmd, NSURLRequest *req) {
+    SEL canInitWithRequest = NSSelectorFromString(@"fix_canInitWithRequest:");
+    return [sender performSelector:canInitWithRequest withObject:req];
 }
+
 #pragma clang diagnostic pop
+
+
 
 + (void)test {
     const char *className = @"_NSURLHTTPProtocol".UTF8String;

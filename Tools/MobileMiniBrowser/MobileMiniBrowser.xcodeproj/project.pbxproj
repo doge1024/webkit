@@ -15,6 +15,8 @@
 		349E878821C79A49008813CE /* NSURLRequest+CYLNSURLProtocolExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 349E878621C79A49008813CE /* NSURLRequest+CYLNSURLProtocolExtension.m */; };
 		349E878B21C7C0AE008813CE /* MessageThrottle.h in Headers */ = {isa = PBXBuildFile; fileRef = 349E878921C7C0AE008813CE /* MessageThrottle.h */; };
 		349E878C21C7C0AE008813CE /* MessageThrottle.m in Sources */ = {isa = PBXBuildFile; fileRef = 349E878A21C7C0AE008813CE /* MessageThrottle.m */; };
+		349EF3E321C80FEE00446056 /* NSObject+methodSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 349EF3E121C80FEE00446056 /* NSObject+methodSwizzle.h */; };
+		349EF3E421C80FEE00446056 /* NSObject+methodSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 349EF3E221C80FEE00446056 /* NSObject+methodSwizzle.m */; };
 		34BB604721C2D46E00755759 /* NSURLProtocol+HDWebKitSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BB604321C2D46E00755759 /* NSURLProtocol+HDWebKitSupport.m */; };
 		34BB604821C2D46E00755759 /* HDWebURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BB604621C2D46E00755759 /* HDWebURLProtocol.m */; };
 		34BB604921C2D58400755759 /* HDWebURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BB604621C2D46E00755759 /* HDWebURLProtocol.m */; };
@@ -82,6 +84,8 @@
 		349E878621C79A49008813CE /* NSURLRequest+CYLNSURLProtocolExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+CYLNSURLProtocolExtension.m"; sourceTree = "<group>"; };
 		349E878921C7C0AE008813CE /* MessageThrottle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageThrottle.h; sourceTree = "<group>"; };
 		349E878A21C7C0AE008813CE /* MessageThrottle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageThrottle.m; sourceTree = "<group>"; };
+		349EF3E121C80FEE00446056 /* NSObject+methodSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+methodSwizzle.h"; sourceTree = "<group>"; };
+		349EF3E221C80FEE00446056 /* NSObject+methodSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+methodSwizzle.m"; sourceTree = "<group>"; };
 		34BB604321C2D46E00755759 /* NSURLProtocol+HDWebKitSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+HDWebKitSupport.m"; sourceTree = "<group>"; };
 		34BB604421C2D46E00755759 /* HDWebURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDWebURLProtocol.h; sourceTree = "<group>"; };
 		34BB604521C2D46E00755759 /* NSURLProtocol+HDWebKitSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+HDWebKitSupport.h"; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 				349E878621C79A49008813CE /* NSURLRequest+CYLNSURLProtocolExtension.m */,
 				349E878921C7C0AE008813CE /* MessageThrottle.h */,
 				349E878A21C7C0AE008813CE /* MessageThrottle.m */,
+				349EF3E121C80FEE00446056 /* NSObject+methodSwizzle.h */,
+				349EF3E221C80FEE00446056 /* NSObject+methodSwizzle.m */,
 			);
 			path = URLProtocol;
 			sourceTree = "<group>";
@@ -268,6 +274,7 @@
 				CD498B4F1D763D7600681FA7 /* WebViewController.h in Headers */,
 				3486925521C38FB600C3D9F9 /* FishMyHook.h in Headers */,
 				349E878721C79A49008813CE /* NSURLRequest+CYLNSURLProtocolExtension.h in Headers */,
+				349EF3E321C80FEE00446056 /* NSObject+methodSwizzle.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +437,7 @@
 				3486925421C38FB600C3D9F9 /* FishMyHook.m in Sources */,
 				349E878421C777C9008813CE /* Aspects.m in Sources */,
 				34BB604921C2D58400755759 /* HDWebURLProtocol.m in Sources */,
+				349EF3E421C80FEE00446056 /* NSObject+methodSwizzle.m in Sources */,
 				34BB604A21C2D58B00755759 /* NSURLProtocol+HDWebKitSupport.m in Sources */,
 				CD498B4D1D763D7100681FA7 /* AppDelegate.m in Sources */,
 				349E878C21C7C0AE008813CE /* MessageThrottle.m in Sources */,

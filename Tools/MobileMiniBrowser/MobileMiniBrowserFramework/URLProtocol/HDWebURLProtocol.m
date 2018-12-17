@@ -26,7 +26,9 @@
 }
 
 + (BOOL)canInitWithRequest:(NSURLRequest *)request {
-    
+//    if ([request valueForHTTPHeaderField:@"HDProtocolWebPostKey"]) {
+//        return YES;
+//    }
     return NO;
 }
 

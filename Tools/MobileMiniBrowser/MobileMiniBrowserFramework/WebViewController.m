@@ -102,7 +102,7 @@ void* URLContext = &URLContext;
         \"Content-Type\": \"application/x-www-form-urlencoded\", \
         \"HDProtocolWebPostKey\": \"1\" \
     }, \
-    method: \"POST\", \
+    method: \"PUT\", \
     body: \"name=llllllll\" \
     }).then(response => response.json()).then(response => { \
         console.log(response) \

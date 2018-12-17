@@ -14,29 +14,27 @@
 @implementation FishMyHook
 
 + (void)load {
-    if (([[[UIDevice currentDevice] systemVersion] doubleValue] >= 8.0)) {
-        const char *className = @"WKCustomProtocol".UTF8String;
-        Class WKCustomProtocolClass = objc_getClass(className);
-        SEL af_startLoading = NSSelectorFromString(@"fix_startLoading");
-
-        SEL startLoading = NSSelectorFromString(@"startLoading");
-
-        BOOL add1 = class_addMethod(WKCustomProtocolClass,
-                                    startLoading,
-                                    class_getMethodImplementation(WKCustomProtocolClass, startLoading),
-                                    "v@:");
-
-        BOOL add2 = class_addMethod(WKCustomProtocolClass,
-                                    af_startLoading,
-                                    (IMP)first_startLoading,
-                                    "v@:");
-
-        NSLog(@"%d,%d", add1, add2);
-
-        Method orgi = class_getInstanceMethod(WKCustomProtocolClass, startLoading);
-        Method after = class_getInstanceMethod(WKCustomProtocolClass, af_startLoading);
-        method_exchangeImplementations(orgi, after);
-    }
+    const char *className = @"HDWebURLProtocol".UTF8String;
+    Class WKCustomProtocolClass = objc_getClass(className);
+    SEL af_startLoading = NSSelectorFromString(@"fix_startLoading");
+    
+    SEL startLoading = NSSelectorFromString(@"startLoading");
+    
+    BOOL add1 = class_addMethod(WKCustomProtocolClass,
+                                startLoading,
+                                class_getMethodImplementation(WKCustomProtocolClass, startLoading),
+                                "v@:");
+    
+    BOOL add2 = class_addMethod(WKCustomProtocolClass,
+                                af_startLoading,
+                                (IMP)first_startLoading,
+                                "v@:");
+    
+    NSLog(@"%d,%d", add1, add2);
+    
+    Method orgi = class_getClassMethod(WKCustomProtocolClass, startLoading);
+    Method after = class_getClassMethod(WKCustomProtocolClass, af_startLoading);
+    method_exchangeImplementations(orgi, after);
 }
 
 #pragma clang diagnostic push

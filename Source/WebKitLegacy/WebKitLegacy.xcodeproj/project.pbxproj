@@ -3220,6 +3220,7 @@
 				TargetAttributes = {
 					9398100A0824BF01008DF038 = {
 						DevelopmentTeam = 5CJEBBFK9A;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -3722,9 +3723,11 @@
 			baseConfigurationReference = 1C904FD20BA9DD0F0081E9D0 /* WebKitLegacy.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_DEFINES = "$(DEBUG_DEFINES_debug) ENABLE_WEBKIT_UNSET_DYLD_FRAMEWORK_PATH";
-				DEVELOPMENT_TEAM = 5CJEBBFK9A;
+				DEVELOPMENT_TEAM = "";
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -3732,8 +3735,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1C904FD20BA9DD0F0081E9D0 /* WebKitLegacy.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_DEFINES = "$(DEBUG_DEFINES_$(CURRENT_VARIANT)) ENABLE_WEBKIT_UNSET_DYLD_FRAMEWORK_PATH";
+				DEVELOPMENT_TEAM = "";
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -3742,7 +3749,11 @@
 			baseConfigurationReference = 1C904FD20BA9DD0F0081E9D0 /* WebKitLegacy.xcconfig */;
 			buildSettings = {
 				BUILD_VARIANTS = normal;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Production;
 		};

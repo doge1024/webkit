@@ -26,6 +26,7 @@
 }
 
 + (BOOL)canInitWithRequest:(NSURLRequest *)request {
+    
     return NO;
 }
 
